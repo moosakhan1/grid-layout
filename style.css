@@ -1,0 +1,140 @@
+/* body{
+    margin: 10px;
+    padding: 0;
+}
+.parent{
+    display: grid;
+    grid-template-areas: "nav nav nav"
+                        "menu main right"
+                        "menu footer footer";
+                        gap: 12px;
+                        grid-template-rows: 55px 55px 55px;
+}
+
+.nav{
+    border: 2px solid black;
+
+    grid-area: nav;
+}
+.menu{
+    border: 2px solid black;
+    grid-area: menu;
+}
+.main{
+    border: 2px solid black;
+    grid-area: main;
+
+}
+.right{
+    border: 2px solid black;
+    grid-area: right;
+
+}
+.footer{
+    border: 2px solid black;
+    grid-area: footer;
+}
+@media only screen and (max-width: 1000px) {
+    .parent{
+        grid-template-areas: "nav"
+                            "menu"
+                            "main"
+                            "right"
+                            "footer"                    ;
+    grid-template-rows: 55px 55px 55px 55px 55px;
+    }
+    
+} */
+
+
+
+
+body{
+    margin: 10px;
+    padding: 0;
+}
+.parent{
+    display: grid;
+    grid-template-areas: "header menu menu"
+                        "hero hero hero"
+                        "main white1 img"
+                        "main white1 exter";
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 306px 420px 400px;
+    gap: 12px;
+    text-align: center;
+    position: relative;
+
+    /* justify-items: center; */
+
+}
+.opration{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    /* margin: auto; */
+}
+.header{
+    border: 2px solid black;
+    grid-area: header;
+    width: fit-content;
+    
+}
+.menu{
+    border: 2px solid black;
+    grid-area: menu;
+
+}
+.hero{
+    border: 2px solid black;
+    grid-area: hero;
+
+}
+.main{
+    border: 2px solid black;
+    grid-area: main;
+
+}
+.white1{
+    border: 2px solid black;
+    grid-area: white1;
+
+}
+.img{
+    border: 2px solid black;
+    grid-area: img;
+
+
+}
+.exter{
+    border: 2px solid black;
+    grid-area: exter;
+
+}
+@media only screen and (max-width: 1000px) {
+    .parent{
+        grid-template-areas: "header header header"
+                            "hero hero hero"
+                            "menu main main"
+                            "menu exter exter";
+    }
+    .exter{
+        /* padding: 100px 100px; */
+    }
+    .img{
+        display: none;
+    }
+    .white1{
+        display: none;
+    }
+}
+@media only screen and (max-width: 375px){
+    .parent{
+        grid-template-areas: "header header header"
+                            "hero hero hero"
+                            "menu menu menu"
+                            "main main main"
+                            "exter exter exter";
+    }
+}
